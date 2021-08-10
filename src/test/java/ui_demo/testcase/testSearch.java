@@ -1,14 +1,11 @@
-package UI_Demo.testcase;
+package ui_demo.testcase;
 
-import UI_Demo.pages.App;
-import UI_Demo.pages.SearchPage;
+import ui_demo.pages.App;
+import ui_demo.pages.SearchPage;
 
-import org.hamcrest.CoreMatchers;
-import org.junit.After;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;

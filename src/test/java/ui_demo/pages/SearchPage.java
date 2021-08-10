@@ -1,6 +1,4 @@
-package UI_Demo.pages;
-
-import org.junit.After;
+package ui_demo.pages;
 
 public class SearchPage extends App {
 
