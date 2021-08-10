@@ -39,6 +39,7 @@ public class App extends BasePage {
         driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
         //driver.findElement(By.id("com.xueqiu.android:id/home_search")).click();
         findElement("com.xueqiu.android:id/home_search").click();
+        parseSteps("/ui_demo/pages/App.yaml","toSearch");
         return new SearchPage();
 
     }

@@ -57,34 +57,55 @@ public class BasePage {
            HashMap<String, TestCaseSteps> steps =mapper.readValue(
                    this.getClass().getResourceAsStream(path),typeRef
            );
+           parseSteps(steps.get(method));
 
-           steps.get("search").getSteps().forEach(step->{
-               WebElement element = null;
-               String id=step.get("id");
-               if (id!=null){
-                   element=driver.findElement(By.id(id));
-               }
-               String xpath=step.get("xpath");
-               if (xpath!=null){
-                   element=driver.findElement(By.id(xpath));
-               }
-               String aid=step.get("aid");
-               if (aid!=null){
-                   element=driver.findElement(MobileBy.AccessibilityId(aid));
-               }
-               String send=step.get("send");
-               if (send!=null){
-                   element.sendKeys(send);
-               }
-               else{
-                   element.click();
-               }
-           });
        }
        catch (IOException e){
            e.printStackTrace();
        }
    }
+
+   public static  void parseSteps(String path,String method){
+       ObjectMapper mapper = new ObjectMapper(new YAMLFactory());
+
+       TypeReference<HashMap<String, TestCaseSteps>> typeRef =new TypeReference<HashMap<String, TestCaseSteps>>(){};
+       try{
+           HashMap<String, TestCaseSteps> steps =mapper.readValue(
+                   BasePage.class.getResourceAsStream(path),typeRef
+           );
+           parseSteps(steps.get(method));
+
+       }
+       catch (IOException e){
+           e.printStackTrace();
+       }
+   }
+
+    private static void parseSteps(TestCaseSteps steps){
+        steps.getSteps().forEach(step->{
+            WebElement element = null;
+            String id=step.get("id");
+            if (id!=null){
+                element=driver.findElement(By.id(id));
+            }
+            String xpath=step.get("xpath");
+            if (xpath!=null){
+                element=driver.findElement(By.id(xpath));
+            }
+            String aid=step.get("aid");
+            if (aid!=null){
+                element=driver.findElement(MobileBy.AccessibilityId(aid));
+            }
+            String send=step.get("send");
+            if (send!=null){
+                element.sendKeys(send);
+            }
+            else{
+                element.click();
+            }
+        });
+    }
+
  @Test
     public void parseSteps() throws IOException {
         App.before();
