@@ -86,23 +86,17 @@ public class BasePage {
 
 
 
-   public void parseSteps(String method)  throws  IOException{
-       ObjectMapper mapper = new ObjectMapper(new YAMLFactory());
-       String path='/'+this.getClass().getCanonicalName().replace('.','/')+".yaml";
-       TypeReference<HashMap<String, TestCaseSteps>> typeRef =new TypeReference<HashMap<String, TestCaseSteps>>(){};
-       try{
-           HashMap<String, TestCaseSteps> steps =mapper.readValue(
-                   this.getClass().getResourceAsStream(path),typeRef
-           );
-           parseSteps(steps.get(method));
 
-       }
-       catch (IOException e){
-           e.printStackTrace();
-       }
-   }
 
-   public static  void parseSteps(String path,String method){
+    public  void parseSteps(String method) {
+//        HashMap<String, List<HashMap<String, String>>> 可以取消steps的多余关键字
+        //TODO: 参数化，把关键数据参数化到你的yaml中
+
+        String path = "/" + this.getClass().getCanonicalName().replace('.', '/') + ".yaml";
+        parseSteps(path, method);
+    }
+
+   public   void parseSteps(String path,String method){
        ObjectMapper mapper = new ObjectMapper(new YAMLFactory());
 
        TypeReference<HashMap<String, TestCaseSteps>> typeRef =new TypeReference<HashMap<String, TestCaseSteps>>(){};
@@ -118,7 +112,13 @@ public class BasePage {
        }
    }
 
-    private static void parseSteps(TestCaseSteps steps){
+   //省去parseSteps中参数方法名
+    public  void parseSteps(){
+        String method=Thread.currentThread().getStackTrace()[2].getMethodName();
+        System.out.println(method);
+        parseSteps(method);
+    }
+    private  void parseSteps(TestCaseSteps steps){
         steps.getSteps().forEach(step->{
             WebElement element = null;
             String id=step.get("id");
@@ -211,7 +211,7 @@ public class BasePage {
 
     }
  @Test
-    public void parseSteps() throws IOException {
+    public void testparseSteps() throws IOException {
         App.before();
         BasePage basePage =new BasePage();
         basePage.parseSteps("search");

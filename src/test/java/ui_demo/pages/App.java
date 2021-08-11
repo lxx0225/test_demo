@@ -37,16 +37,17 @@ public class App extends BasePage {
     }
 
 
-    public static SearchPage toSearch(){
+    public SearchPage toSearch(){
         //driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
         //driver.findElement(By.id("com.xueqiu.android:id/home_search")).click();
         //findElement("com.xueqiu.android:id/home_search").click();
-        parseSteps("/ui_demo/pages/App.yaml","toSearch");
+        //parseSteps("/ui_demo/pages/App.yaml","toSearch");
+        parseSteps();
         return new SearchPage();
 
     }
 
-    public static StockPage toStocks(){
+    public  StockPage toStocks(){
       click(By.xpath("//*[contains(@resource-id, 'tab_name') and @text='行情']"));
         //parseSteps("/app/page/app.yaml", "toStocks");
         return new StockPage();
