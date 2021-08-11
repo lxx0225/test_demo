@@ -17,11 +17,23 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 public class BasePage {
 
     public static AppiumDriver driver;
+
+    public static HashMap<String, Object> getParams() {
+        return params;
+    }
+
+    public static void setParams(HashMap<String, Object> params) {
+        BasePage.params = params;
+    }
+
+    public static HashMap<String ,Object> params=new HashMap<>();
+
 
     public static WebElement findElement( String ele) {
         try
@@ -123,8 +135,20 @@ public class BasePage {
             String send=step.get("send");
             if (send!=null){
                 System.out.println(send);
-                element.sendKeys(send);
-            }
+                    //配置文件中的参数替换
+                    for(Map.Entry<String, Object> kv: params.entrySet()){
+                        String matcher="${"+kv.getKey()+"}";
+                        if(send.contains(matcher)) {
+                            System.out.println(kv);
+                            send = send.replace(matcher, kv.getValue().toString());
+                        }
+                    }
+
+                    element.sendKeys(send);
+
+                }
+
+
             else{
                 System.out.println("click");
                 element.click();

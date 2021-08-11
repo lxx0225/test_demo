@@ -2,12 +2,19 @@ package ui_demo.pages;
 
 import org.openqa.selenium.By;
 
+import java.io.IOException;
+import java.util.HashMap;
+
 public class SearchPage extends App {
 
-    public SearchPage search(String keyworlds){
-//        findElement("com.xueqiu.android:id/search_input_text").sendKeys(keyworlds);
+    public SearchPage search(String keywords) throws IOException {
+        HashMap<String,Object> data=new HashMap<>();
+        data.put("keywords",keywords);
+        setParams(data);
+//        findElement("com.xueqiu.android:id/search_input_text").sendKeys(keywords);
 //        findElement("com.xueqiu.android:id/name").click();
-        parseSteps("/ui_demo/pages/SearchPage.yaml","search");
+        //parseSteps("/ui_demo/pages/SearchPage.yaml","search");
+        parseSteps("search");
         return this ;
     }
 
