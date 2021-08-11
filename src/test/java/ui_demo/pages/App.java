@@ -1,6 +1,7 @@
 package ui_demo.pages;
 
 import io.appium.java_client.android.AndroidDriver;
+import org.openqa.selenium.By;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.net.MalformedURLException;
@@ -26,7 +27,8 @@ public class App extends BasePage {
         capabilities.setCapability("noReset", true);
         try {
             driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
-            System.out.println(driver);
+           // System.out.println(driver);
+            driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
 
         } catch (MalformedURLException e) {
             e.printStackTrace();
@@ -36,11 +38,18 @@ public class App extends BasePage {
 
 
     public static SearchPage toSearch(){
-        driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
+        //driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
         //driver.findElement(By.id("com.xueqiu.android:id/home_search")).click();
-        findElement("com.xueqiu.android:id/home_search").click();
+        //findElement("com.xueqiu.android:id/home_search").click();
         parseSteps("/ui_demo/pages/App.yaml","toSearch");
         return new SearchPage();
+
+    }
+
+    public static StockPage toStocks(){
+      click(By.xpath("//*[contains(@resource-id, 'tab_name') and @text='行情']"));
+        //parseSteps("/app/page/app.yaml", "toStocks");
+        return new StockPage();
 
     }
 }

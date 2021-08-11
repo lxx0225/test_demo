@@ -1,0 +1,8 @@
+search:
+  steps:
+  - id: search_input_text
+    send: pdd
+  - id: name
+quit:
+  steps:
+  - id: action_close

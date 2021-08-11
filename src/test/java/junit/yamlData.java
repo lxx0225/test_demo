@@ -1,6 +1,6 @@
 package junit;
 
-import ui_demo.pages.TestCaseSteps;
+import ui_demo.entity.TestCaseSteps;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
