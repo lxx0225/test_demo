@@ -7,6 +7,7 @@ import org.junit.jupiter.params.provider.MethodSource;
 import ui_demo.pages.App;
 import ui_demo.pages.StockPage;
 
+import java.io.IOException;
 import java.net.MalformedURLException;
 import java.util.stream.Stream;
 
@@ -41,7 +42,7 @@ public class TestStock {
     @ParameterizedTest
 //    @ValueSource(strings = { "pdd", "xiaomi"})
     @MethodSource("data")
-    public void addStock(String code, String name){
+    public void addStock(String code, String name) throws IOException {
         stockPage.toSearch().search(code).select().quit();
         assertThat(stockPage.getAllStocks(), hasItem(name));
 

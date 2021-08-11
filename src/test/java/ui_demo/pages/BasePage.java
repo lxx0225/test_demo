@@ -33,7 +33,11 @@ public class BasePage {
     }
 
     public static HashMap<String ,Object> params=new HashMap<>();
-
+//测试步骤结果读取
+    public static HashMap<String, Object> getResults() {
+        return results;
+    }
+   public static  HashMap<String,Object> results =new HashMap<>();
 
     public static WebElement findElement( String ele) {
         try
@@ -147,7 +151,11 @@ public class BasePage {
                     element.sendKeys(send);
 
                 }
+            else if(step.get("get")!=null){
+                String attribute=element.getAttribute(step.get("get").toString());
+                getResults().put(step.get("dump").toString(), attribute);
 
+            }
 
             else{
                 System.out.println("click");

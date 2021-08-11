@@ -24,11 +24,14 @@ public class SearchPage extends App {
         return  new App();
 
     }
-    public Float getPrice(){
+    public Float getPrice() throws IOException {
         //将获取的数值转换成浮点数
-       Float price= Float.parseFloat( findElement("com.xueqiu.android:id/current_price").getText());
-        System.out.println(price);
-        return price;
+        parseSteps("getPrice");
+
+        //Float price= Float.parseFloat( findElement("com.xueqiu.android:id/current_price").getText());
+        //System.out.println(price);
+        return Float.valueOf(getResults().get("price").toString());
+
     }
     public SearchPage select(){
       click(By.id("com.xueqiu.android:id/follow_btn"));
