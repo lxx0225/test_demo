@@ -21,8 +21,8 @@ public class TestStock {
     private static StockPage stockPage;
     @BeforeAll
     public static void beforeAll() throws MalformedURLException {
-        //pp.before();
-        stockPage= App.toStocks();
+        App.before();
+        stockPage= App.getInstance().toStocks();
 
     }
     @BeforeEach

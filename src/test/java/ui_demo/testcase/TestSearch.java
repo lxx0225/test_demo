@@ -30,7 +30,8 @@ public class TestSearch {
 
     @BeforeEach
     public void before() {
-        searchPage = App.toSearch();
+
+        searchPage = App.getInstance().toSearch();
     }
 
 

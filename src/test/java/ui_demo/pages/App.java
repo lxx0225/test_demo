@@ -10,6 +10,16 @@ import java.util.concurrent.TimeUnit;
 
 public class App extends BasePage {
 
+    //单例
+    private static App app;
+    public static App getInstance(){
+        if(app==null){
+            app=new App();
+        }
+        return app;
+    }
+
+
 
     public static void before(){
         DesiredCapabilities capabilities = new DesiredCapabilities();

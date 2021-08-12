@@ -1,8 +1,14 @@
 search:
   steps:
-  - id: search_input_text
-    send: pdd
-  - id: name
+    - id: search_input_text
+      send: ${keywords}
+    - id: name
 quit:
   steps:
-  - id: action_close
+    - id: action_close
+
+getPrice:
+  steps:
+    - id: current_price
+      get: text
+      dump: price
