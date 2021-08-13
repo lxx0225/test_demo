@@ -9,9 +9,9 @@ ui_demo\pages\SearchPage.class
 ui_demo\pages\BasePage.class
 ui_demo\pages\StockPage.class
 ui_demo\testcase\TestStock.class
-ui_demo\pages\BasePage$2.class
 junit\JmeterJunit.class
 ui_demo\pages\BasePage$1.class
+ui_demo\testcase\TestSuiteExample.class
 ui_demo\entity\TestCaseSteps.class
 ui_demo\testcase\TestSearch.class
 mock\testMock.class

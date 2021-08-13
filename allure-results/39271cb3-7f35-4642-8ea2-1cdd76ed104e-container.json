@@ -1,0 +1,1 @@
+{"uuid":"39271cb3-7f35-4642-8ea2-1cdd76ed104e","name":"TestStock","children":["a55d4e37-fc28-4ed0-a8fc-d51209faae10","3292465b-559c-473b-a877-de1f9289bbf3"],"befores":[{"name":"beforeAll","status":"passed","stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1628846975618,"stop":1628847007682}],"afters":[],"links":[],"start":1628846975617,"stop":1628847056264}

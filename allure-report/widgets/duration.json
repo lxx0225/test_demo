@@ -1,0 +1,31 @@
+[ {
+  "uid" : "a61213e84227c47a",
+  "name" : "addDefaultSelectedStocks()",
+  "time" : {
+    "start" : 1628845494252,
+    "stop" : 1628845514679,
+    "duration" : 20427
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "6cbb14a49139df73",
+  "name" : "[1] pdd, 拼多多",
+  "time" : {
+    "start" : 1628845514699,
+    "stop" : 1628845527489,
+    "duration" : 12790
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "a6d0013b657e222b",
+  "name" : "testSearch(String, double)",
+  "time" : {
+    "start" : 1628845466002,
+    "stop" : 1628845466002,
+    "duration" : 0
+  },
+  "status" : "broken",
+  "severity" : "normal"
+} ]

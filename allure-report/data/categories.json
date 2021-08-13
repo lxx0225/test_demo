@@ -1,0 +1,43 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "name" : "categories",
+  "children" : [ {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "Configuration error: You must configure at least one set of arguments for this @ParameterizedTest",
+      "children" : [ {
+        "name" : "testSearch(String, double)",
+        "uid" : "a6d0013b657e222b",
+        "parentUid" : "5ba56676d04e8d485f2b81785a3aa1c5",
+        "status" : "broken",
+        "time" : {
+          "start" : 1628845466002,
+          "stop" : 1628845466002,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "5ba56676d04e8d485f2b81785a3aa1c5"
+    }, {
+      "name" : "An unknown server-side error occurred while processing the command. Original error: Could not proxy command to remote server. Original error: Error: socket hang up\nBuild info: version: '3.141.0', revision: '2ecb7d9a', time: '2018-10-31T20:09:30'\nSystem info: host: 'SKY-20171019WTT', ip: '169.254.225.5', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_151'\nDriver info: io.appium.java_client.android.AndroidDriver\nCapabilities {appActivity: .view.WelcomeActivityAlias, appPackage: com.xueqiu.android, databaseEnabled: false, desired: {appActivity: .view.WelcomeActivityAlias, appPackage: com.xueqiu.android, deviceName: DULJOB8DWOZTKR6H, noReset: true, platformName: android, platformVersion: 7.1.1}, deviceApiLevel: 25, deviceManufacturer: OPPO, deviceModel: OPPO A79, deviceName: DULJOB8DWOZTKR6H, deviceScreenDensity: 480, deviceScreenSize: 1080x2160, deviceUDID: DULJOB8DWOZTKR6H, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, noReset: true, pixelRatio: 3, platform: LINUX, platformName: Android, platformVersion: 7.1.1, statBarHeight: 54, takesScreenshot: true, viewportRect: {height: 1962, left: 0, top: 54, width: 1080}, warnings: {}, webStorageEnabled: false}\nSession ID: a01768a5-7266-4942-a2b0-00723c39ac1c\n*** Element info: {Using=id, value=com.xueqiu.android:id/image_cancel}",
+      "children" : [ {
+        "name" : "[1] pdd, 拼多多",
+        "uid" : "6cbb14a49139df73",
+        "parentUid" : "5cec0222921a14d15601eae80530de82",
+        "status" : "broken",
+        "time" : {
+          "start" : 1628845514699,
+          "stop" : 1628845527489,
+          "duration" : 12790
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "5cec0222921a14d15601eae80530de82"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  } ]
+}

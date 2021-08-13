@@ -1,0 +1,61 @@
+{
+  "2df96fe81c95bf7202b75dc16f7749e3" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "6cbb14a49139df73",
+      "status" : "broken",
+      "statusDetails" : "An unknown server-side error occurred while processing the command. Original error: Could not proxy command to remote server. Original error: Error: socket hang up\nBuild info: version: '3.141.0', revision: '2ecb7d9a', time: '2018-10-31T20:09:30'\nSystem info: host: 'SKY-20171019WTT', ip: '169.254.225.5', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_151'\nDriver info: io.appium.java_client.android.AndroidDriver\nCapabilities {appActivity: .view.WelcomeActivityAlias, appPackage: com.xueqiu.android, databaseEnabled: false, desired: {appActivity: .view.WelcomeActivityAlias, appPackage: com.xueqiu.android, deviceName: DULJOB8DWOZTKR6H, noReset: true, platformName: android, platformVersion: 7.1.1}, deviceApiLevel: 25, deviceManufacturer: OPPO, deviceModel: OPPO A79, deviceName: DULJOB8DWOZTKR6H, deviceScreenDensity: 480, deviceScreenSize: 1080x2160, deviceUDID: DULJOB8DWOZTKR6H, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, noReset: true, pixelRatio: 3, platform: LINUX, platformName: Android, platformVersion: 7.1.1, statBarHeight: 54, takesScreenshot: true, viewportRect: {height: 1962, left: 0, top: 54, width: 1080}, warnings: {}, webStorageEnabled: false}\nSession ID: a01768a5-7266-4942-a2b0-00723c39ac1c\n*** Element info: {Using=id, value=com.xueqiu.android:id/image_cancel}",
+      "time" : {
+        "start" : 1628845514699,
+        "stop" : 1628845527489,
+        "duration" : 12790
+      }
+    } ]
+  },
+  "f40f7cc150b886059d201116744b3788" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "a61213e84227c47a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1628845494252,
+        "stop" : 1628845514679,
+        "duration" : 20427
+      }
+    } ]
+  },
+  "f284a019b0405cba19af2b327cbae2b5" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "a6d0013b657e222b",
+      "status" : "broken",
+      "statusDetails" : "Configuration error: You must configure at least one set of arguments for this @ParameterizedTest",
+      "time" : {
+        "start" : 1628845466002,
+        "stop" : 1628845466002,
+        "duration" : 0
+      }
+    } ]
+  }
+}

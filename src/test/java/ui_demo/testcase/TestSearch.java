@@ -1,11 +1,11 @@
 package ui_demo.testcase;
 
+import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.condition.EnabledOnOs;
+import org.junit.jupiter.api.condition.OS;
 import ui_demo.pages.App;
 import ui_demo.pages.SearchPage;
 
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
@@ -34,9 +34,9 @@ public class TestSearch {
         searchPage = App.getInstance().toSearch();
     }
 
-
     @ParameterizedTest
-    @MethodSource("stockPrice")
+   @MethodSource("stockPrice")
+
     public void testSearch(String stock,double price) throws IOException {
         //assertThat(new Double(searchPage.search(stock).getPrice()), greaterThan(price));
         assertThat(new Double(searchPage.search(stock).getPrice()), greaterThanOrEqualTo(price));

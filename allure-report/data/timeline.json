@@ -1,0 +1,52 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "name" : "timeline",
+  "children" : [ {
+    "name" : "SKY-20171019WTT",
+    "children" : [ {
+      "name" : "8108@SKY-20171019WTT.main(1)",
+      "children" : [ {
+        "name" : "[1] pdd, 拼多多",
+        "uid" : "6cbb14a49139df73",
+        "parentUid" : "ab47bed765f7df5df8df23106ef9495d",
+        "status" : "broken",
+        "time" : {
+          "start" : 1628845514699,
+          "stop" : 1628845527489,
+          "duration" : 12790
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "addDefaultSelectedStocks()",
+        "uid" : "a61213e84227c47a",
+        "parentUid" : "ab47bed765f7df5df8df23106ef9495d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1628845494252,
+          "stop" : 1628845514679,
+          "duration" : 20427
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "testSearch(String, double)",
+        "uid" : "a6d0013b657e222b",
+        "parentUid" : "ab47bed765f7df5df8df23106ef9495d",
+        "status" : "broken",
+        "time" : {
+          "start" : 1628845466002,
+          "stop" : 1628845466002,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "ab47bed765f7df5df8df23106ef9495d"
+    } ],
+    "uid" : "5949e16643f11eade2e8de2cde2b64ec"
+  } ]
+}

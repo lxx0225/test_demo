@@ -1,12 +1,13 @@
 package ui_demo.testcase;
 
 import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.condition.EnabledOnOs;
+import org.junit.jupiter.api.condition.OS;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 import ui_demo.pages.App;
 import ui_demo.pages.StockPage;
-
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.util.stream.Stream;
@@ -31,6 +32,9 @@ public class TestStock {
     }
     @Order(100)
     @Test
+//    @EnabledOnOs({OS.WINDOWS, OS.LINUX})
+//    @DisplayName("操作系统：windows和linux都会执行")
+//    @RepeatedTest(2)
     public void addDefaultSelectedStocks(){
         if(stockPage.getAllStocks().size()>=1){
             stockPage.deleteAll();
